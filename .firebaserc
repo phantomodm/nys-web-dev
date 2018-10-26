@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "nys-web-dev": "nys-web-dev",
+    "default": "nys-web-dev",
+    "staging": "nys-web-dev"
+  }
+}

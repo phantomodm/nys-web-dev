@@ -1,0 +1,21 @@
+version: '2'
+
+services:
+
+  nys-web-dev-client:
+    build:
+      context: .
+      dockerfile: ./.docker/development.dockerfile
+    command: npm start
+    container_name: nys-web-dev-client-start
+    image: nys-web-dev-client
+    networks:
+      - dev-network
+    ports:
+      - '4200:4200'
+    volumes:
+      - .:/home/app/nys-web-dev-client
+
+networks:
+  dev-network:
+    driver: bridge
